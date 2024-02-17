@@ -84,7 +84,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
 });
 
 app.get('/register_commands', async (req,res) => {
-  let slash_commands = Object.values(listCommands)
+  let slash_commands = listCommands
   try
   {
     // api docs - https://discord.com/developers/docs/interactions/application-commands#create-global-application-command
