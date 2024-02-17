@@ -1,11 +1,10 @@
-let listCommands = {
-  "hello": {
+let listCommands = [
+  {
     "name": "hello",
     "description": "replies with Hallo!",
     "options": []
   },
-
-  "add": {
+  {
     "name": "add",
     "description": "Add a habit to track (●'◡'●)",
     "options": [
@@ -23,6 +22,5 @@ let listCommands = {
       }
     ]
   }
-}
-
+]
 export default listCommands

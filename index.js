@@ -83,7 +83,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
 
 });
 
-app.get('/register_commands', async (req,res) =>{
+app.get('/register_commands', async (req,res) => {
   let slash_commands = Object.values(listCommands)
   try
   {
@@ -94,7 +94,7 @@ app.get('/register_commands', async (req,res) =>{
     )
     console.log(discord_response.data)
     return res.send('commands have been registered')
-  }catch(e){
+  } catch(e) {
     console.error(e.code)
     console.error(e.response?.data)
     return res.send(`${e.code} error from discord`)
