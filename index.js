@@ -84,7 +84,31 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
 });
 
 app.get('/register_commands', async (req,res) => {
-  let slash_commands = listCommands
+  let slash_commands = [
+    {
+      "name": "hello",
+      "description": "replies with Hallo!",
+      "options": []
+    },
+    {
+      "name": "add",
+      "description": "Add a habit to track (●'◡'●)",
+      "options": [
+        {
+          "name": "habit name",
+          "description": "Something you want to track. Example: drink 1l water",
+          "type": 3,
+          "required": True,
+        },
+        {
+          "name": "duration",
+          "description": "Set a duration. Default 30 days.",
+          "type": 4,
+          "required": False,
+        }
+      ]
+    }
+  ]
   try
   {
     // api docs - https://discord.com/developers/docs/interactions/application-commands#create-global-application-command
