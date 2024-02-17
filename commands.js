@@ -1,4 +1,4 @@
-export default listCommands = {
+let listCommands = {
   "hello": {
     "name": "hello",
     "description": "replies with Hallo!",
@@ -23,5 +23,6 @@ export default listCommands = {
       },
     ]
   }
-
 }
+
+export default listCommands
