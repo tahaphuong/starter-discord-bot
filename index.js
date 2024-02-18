@@ -85,6 +85,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
 
 app.get('/register_commands', async (req,res) => {
   let slash_commands = Object.values(listCommands)
+  console.log(slash_commands)
   try
   {
     // api docs - https://discord.com/developers/docs/interactions/application-commands#create-global-application-command
@@ -96,7 +97,7 @@ app.get('/register_commands', async (req,res) => {
     return res.send('commands have been registered')
   } catch(e) {
     console.error(e.code)
-    console.error(e.response?.data)
+    console.error(e.response)
     return res.send(`${e.code} error from discord`)
   }
 })

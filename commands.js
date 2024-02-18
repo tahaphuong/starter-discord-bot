@@ -1,10 +1,10 @@
-let listCommands = [
-  {
+let listCommands = {
+  "hello": {
     "name": "hello",
     "description": "replies with Hallo!",
     "options": []
   },
-  {
+  "add": {
     "name": "add",
     "description": "Add a habit to track (●'◡'●)",
     "options": [
@@ -22,5 +22,5 @@ let listCommands = [
       }
     ]
   }
-]
+}
 module.exports = {listCommands}
