@@ -23,4 +23,4 @@ let listCommands = [
     ]
   }
 ]
-export default listCommands
+module.exports = {listCommands}
