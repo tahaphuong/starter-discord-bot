@@ -4,8 +4,8 @@ require('dotenv').config()
 const APPLICATION_ID = process.env.APPLICATION_ID
 const TOKEN = process.env.TOKEN
 const PUBLIC_KEY = process.env.PUBLIC_KEY || 'not set'
-const listCommands = require('./commands')
-// const GUILD_ID = process.env.GUILD_ID
+// const listCommands = require('./commands')
+const GUILD_ID = process.env.GUILD_ID
 
 
 const axios = require('axios')
@@ -87,6 +87,16 @@ app.get('/register_commands', async (req,res) => {
   let slash_commands = [
     {
       "name": "hello",
+      "description": "replies with Hallo!",
+      "options": []
+    },
+    {
+      "name": "add",
+      "description": "replies with Hallo!",
+      "options": []
+    },
+    {
+      "name": "dm",
       "description": "replies with Hallo!",
       "options": []
     }
